@@ -2,26 +2,17 @@
 {
     internal class AddTaskCommand : Command
     {
-        private TodoApp _todoApp;
-        public char Char { get; } = '+';
-        public string _text = "legge til ny oppgave";
-
-
         public AddTaskCommand(TodoApp todoApp)
+        : base(todoApp, '+', "legge til ny oppgave")
         {
-            _todoApp = todoApp;
         }
 
-        public void Run()
+        public override void Run()
         {
             Console.Write("Hva er oppgaven? ");
             var taskText = Console.ReadLine();
             var task = new Task(taskText);
             _todoApp.AddTask(task);
-        }
-        public void ShowMenuItem()
-        {
-            Console.WriteLine(Char + ": " + _text);
         }
     }
 }
