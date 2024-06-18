@@ -2,7 +2,7 @@
 
 namespace CountLines
 {
-    internal class LineCountService
+    public class LineCountService
     {
         private ILineSource _lineSource;
 
@@ -18,7 +18,7 @@ namespace CountLines
             var line = _lineSource.GetLine();
             while (line != null)
             {
-                if (line.Contains(searchText))
+                if (line.Contains(searchText, StringComparison.CurrentCultureIgnoreCase))
                 {
                     matchingLineCount++;
                 }

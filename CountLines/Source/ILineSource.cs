@@ -1,6 +1,6 @@
 ﻿namespace CountLines.Source
 {
-    internal interface ILineSource
+    public interface ILineSource
     {
         string GetLine();
     }

@@ -19,7 +19,7 @@ namespace ClaimTheSquareFullStackWithDI.DependencyInjection
             return textobjects;
         }
 
-        public bool Create(TextObject textObject)
+        public Task<bool> Create(TextObject textObject)
         {
             throw new NotImplementedException();
         }

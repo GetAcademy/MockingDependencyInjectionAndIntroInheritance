@@ -14,6 +14,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "plan", "plan", "{2BF83688-5
 		plan.txt = plan.txt
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CountLLines.Test", "CountLLines.Test\CountLLines.Test.csproj", "{8A11D75F-652F-411D-9A36-B4E884CBB568}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -32,6 +34,10 @@ Global
 		{DBEE0FFE-AE6F-4728-8C9F-32207E037E71}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DBEE0FFE-AE6F-4728-8C9F-32207E037E71}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DBEE0FFE-AE6F-4728-8C9F-32207E037E71}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8A11D75F-652F-411D-9A36-B4E884CBB568}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8A11D75F-652F-411D-9A36-B4E884CBB568}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8A11D75F-652F-411D-9A36-B4E884CBB568}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8A11D75F-652F-411D-9A36-B4E884CBB568}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

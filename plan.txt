@@ -1,9 +1,9 @@
-- Unit testing og mocking av koden fra sist 
-  (dvs. telling av linjer med og uten søketekst)
+1: Unit testing og mocking av koden fra sist 
+   (dvs. telling av linjer med og uten søketekst)
 
-- Dependency Injection i ASP.NET 
-  jeg viser et oppsett som bruker den innebygde DI-motoren
+2: Dependency Injection i ASP.NET 
+   jeg viser et oppsett som bruker den innebygde DI-motoren
 
-- Introduksjon til arv 
-  kommandostyrt program 
-  hva kan vi få til med arv som vi ikke kan få til med interface
+3: Introduksjon til arv 
+   kommandostyrt program 
+   hva kan vi få til med arv som vi ikke kan få til med interface
