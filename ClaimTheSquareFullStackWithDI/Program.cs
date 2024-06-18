@@ -4,7 +4,7 @@ using ClaimTheSquareFullStackWithDI.DependencyInjection;
 var builder = WebApplication.CreateBuilder(args);
 var connStr = @"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=MyTextObjects;Integrated Security=True";
 builder.Services.AddSingleton(new SqlConnectionFactory(connStr));
-builder.Services.AddScoped<ITextObjectRespository, InMemoryTextObjectRepository>();
+builder.Services.AddScoped<ITextObjectRespository, SqlTextObjectRepository>();
 
 var app = builder.Build();
 app.UseHttpsRedirection();

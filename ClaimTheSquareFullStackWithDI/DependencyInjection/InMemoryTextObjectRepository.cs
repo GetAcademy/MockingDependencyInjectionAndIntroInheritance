@@ -10,6 +10,7 @@ namespace ClaimTheSquareFullStackWithDI.DependencyInjection
         {
             _textObjects = new List<TextObject>();
         }
+
         public Task<IEnumerable<TextObject>> ReadAll()
         {
             return Task.FromResult((IEnumerable<TextObject>)_textObjects);

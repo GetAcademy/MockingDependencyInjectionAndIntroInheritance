@@ -15,6 +15,5 @@ namespace ClaimTheSquareFullStackWithDI.DependencyInjection
         {
             return new SqlConnection(_connectionString);
         }
-
     }
 }

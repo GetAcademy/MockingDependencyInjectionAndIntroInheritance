@@ -19,9 +19,12 @@ namespace ClaimTheSquareFullStackWithDI.DependencyInjection
             return textobjects;
         }
 
-        public Task<bool> Create(TextObject textObject)
+        public async Task<bool> Create(TextObject textObject)
         {
-            throw new NotImplementedException();
+            var conn = _sqlConnectionFactory.Create();
+            var rowsAffected = await conn.ExecuteAsync("INSERT INTO TextObject VALUES (@Index, @Text, @BackColor, @ForeColor)",
+                textObject);
+            return rowsAffected == 1;
         }
     }
 }
