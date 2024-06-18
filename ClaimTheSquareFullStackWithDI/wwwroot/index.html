@@ -1,0 +1,26 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+</head>
+<body>
+    <h1>Terje</h1>
+    <script>
+        getAndPostData();
+        async function getAndPostData() {
+            const response = await axios.get('/terje');
+            const person = response.data;
+            console.log(person);
+
+            const person2 = {
+                name: 'Per',
+                email: 'per@mail.com'
+            };
+            const response2 = await axios.post('/terje', person2);
+        }
+
+    </script>
+</body>
+</html>
