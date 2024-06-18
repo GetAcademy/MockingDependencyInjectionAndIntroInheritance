@@ -1,20 +1,21 @@
-﻿namespace CountLines
+﻿using CountLines.Source;
+
+namespace CountLines
 {
     internal class LineCountService
     {
-        private string _filename;
+        private ILineSource _lineSource;
 
-        public LineCountService(string filename)
+        public LineCountService(ILineSource lineSource)
         {
-            _filename = filename;
+            _lineSource = lineSource;
         }
 
         public LineStats GetCounts(string searchText)
         {
-            using var reader = new StreamReader(_filename);
             var matchingLineCount = 0;
             var totalLineCount = 0;
-            var line = reader.ReadLine();
+            var line = _lineSource.GetLine();
             while (line != null)
             {
                 if (line.Contains(searchText))
@@ -23,10 +24,9 @@
                 }
 
                 totalLineCount++;
-                line = reader.ReadLine();
+                line = _lineSource.GetLine();
             }
             return new LineStats(matchingLineCount, totalLineCount, searchText);
         }
-
     }
 }
