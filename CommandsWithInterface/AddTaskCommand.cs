@@ -1,6 +1,6 @@
 ﻿namespace CommandsWithInterface
 {
-    internal class AddTaskCommand : ICommand
+    internal class AddTaskCommand : Command
     {
         private TodoApp _todoApp;
         public char Char { get; } = '+';

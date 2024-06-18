@@ -1,6 +1,6 @@
 ﻿namespace CommandsWithInterface
 {
-    internal class MarkTaskAsDoneCommand : ICommand
+    internal class MarkTaskAsDoneCommand : Command
     {
         private TodoApp _todoApp;
         public char Char { get; } = 'x';
@@ -10,7 +10,6 @@
         {
             _todoApp = todoApp;
         }
-
 
         public void Run()
         {

@@ -1,6 +1,6 @@
 ﻿namespace CommandsWithInterface
 {
-    internal class RemoveEverythingCommand : ICommand
+    internal class RemoveEverythingCommand : Command
     {
         private TodoApp _todoApp;
         public char Char { get; } = '-';

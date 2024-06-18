@@ -1,7 +1,7 @@
 ﻿using CommandsWithInterface;
 
 var todoApp = new TodoApp();
-var commands = new ICommand[]
+var commands = new Command[]
 {
     new AddTaskCommand(todoApp),
     new MarkTaskAsDoneCommand(todoApp),
@@ -19,36 +19,13 @@ while (true)
     var cmd = Console.ReadLine();
     var theCommand = FindCommand(commands, cmd);
     theCommand?.Run();
-    //if (cmdNo == "1")
-    //{
-    //    cmd1.Run();
-    //}
-    //else if (cmdNo == "2")
-    //{
-    //    cmd2.Run();
-    //}
-
-    //antipattern - mye scoping
-    //foreach (var elA in list1)
-    //{
-    //    if ()
-    //    {
-    //        foreach (var elB in list2)
-    //        {
-    //            if ()
-    //            {
-    //                fy
-    //            }
-    //        }
-    //    }
-    //}
 }
 
-ICommand? FindCommand(ICommand[] commands1, string? s)
+Command? FindCommand(Command[] cmds, string? selectedComand)
 {
-    foreach (var command in commands1)
+    foreach (var command in cmds)
     {
-        if (command.Char == s[0])
+        if (command.Char == selectedComand[0])
         {
             return command;
         }
